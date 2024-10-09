@@ -68,7 +68,723 @@
         "skill_id": 101
     },
     {
-        "skill_name": "Ruby",
+        "skill_name": "Python",
+        "skill_id": 102
+    },
+    {
+        "skill_name": "Python Programming",
+        "skill_id": 103
+    },
+    {
+        "skill_name": "Python Scripting",
+        "skill_id": 104
+    },
+    {
+        "skill_name": "Advanced Python",
+        "skill_id": 105
+    },
+    {
+        "skill_name": "Python for Data Science",
+        "skill_id": 106
+    },
+    {
+        "skill_name": "Node.js",
+        "skill_id": 107
+    },
+    {
+        "skill_name": "Node JavaScript",
+        "skill_id": 108
+    },
+    {
+        "skill_name": "Node Development",
+        "skill_id": 109
+    },
+    {
+        "skill_name": "Node JS Frameworks",
+        "skill_id": 110
+    },
+    {
+        "skill_name": "Node Server-side Programming",
+        "skill_id": 111
+    },
+    {
+        "skill_name": "Cloud Computing",
+        "skill_id": 112
+    },
+    {
+        "skill_name": "Cloud Infrastructure",
+        "skill_id": 113
+    },
+    {
+        "skill_name": "Cloud Architecture",
+        "skill_id": 114
+    },
+    {
+        "skill_name": "Cloud Solutions",
+        "skill_id": 115
+    },
+    {
+        "skill_name": "Cloud Security",
+        "skill_id": 116
+    },
+    {
+        "skill_name": "AWS",
+        "skill_id": 117
+    },
+    {
+        "skill_name": "Amazon Web Services",
+        "skill_id": 118
+    },
+    {
+        "skill_name": "AWS Cloud",
+        "skill_id": 119
+    },
+    {
+        "skill_name": "AWS Infrastructure",
+        "skill_id": 120
+    },
+    {
+        "skill_name": "AWS DevOps",
+        "skill_id": 121
+    },
+    {
+        "skill_name": "DevOps",
+        "skill_id": 122
+    },
+    {
+        "skill_name": "DevOps Engineering",
+        "skill_id": 123
+    },
+    {
+        "skill_name": "DevOps Automation",
+        "skill_id": 124
+    },
+    {
+        "skill_name": "DevOps CI/CD",
+        "skill_id": 125
+    },
+    {
+        "skill_name": "DevOps Tools",
+        "skill_id": 126
+    },
+    {
+        "skill_name": "SQL",
+        "skill_id": 127
+    },
+    {
+        "skill_name": "SQL Database Management",
+        "skill_id": 128
+    },
+    {
+        "skill_name": "SQL Programming",
+        "skill_id": 129
+    },
+    {
+        "skill_name": "SQL Queries",
+        "skill_id": 130
+    },
+    {
+        "skill_name": "Advanced SQL",
+        "skill_id": 131
+    },
+    {
+        "skill_name": "HTML",
+        "skill_id": 132
+    },
+    {
+        "skill_name": "HTML5",
+        "skill_id": 133
+    },
+    {
+        "skill_name": "HTML Coding",
+        "skill_id": 134
+    },
+    {
+        "skill_name": "Web Development with HTML",
+        "skill_id": 135
+    },
+    {
+        "skill_name": "HTML Markup",
+        "skill_id": 136
+    },
+    {
+        "skill_name": "CSS",
+        "skill_id": 137
+    },
+    {
+        "skill_name": "CSS3",
+        "skill_id": 138
+    },
+    {
+        "skill_name": "Responsive CSS",
+        "skill_id": 139
+    },
+    {
+        "skill_name": "CSS Frameworks",
+        "skill_id": 140
+    },
+    {
+        "skill_name": "CSS Styling",
+        "skill_id": 141
+    },
+    {
+        "skill_name": "Angular",
+        "skill_id": 142
+    },
+    {
+        "skill_name": "Angular Framework",
+        "skill_id": 143
+    },
+    {
+        "skill_name": "Angular JavaScript",
+        "skill_id": 144
+    },
+    {
+        "skill_name": "Angular Development",
+        "skill_id": 145
+    },
+    {
+        "skill_name": "Angular Components",
+        "skill_id": 146
+    },
+    {
+        "skill_name": "Java",
+        "skill_id": 147
+    },
+    {
+        "skill_name": "Java Programming",
+        "skill_id": 148
+    },
+    {
+        "skill_name": "Java Development",
+        "skill_id": 149
+    },
+    {
+        "skill_name": "Core Java",
+        "skill_id": 150
+    },
+    {
+        "skill_name": "Advanced Java",
+        "skill_id": 151
+    },
+    {
+        "skill_name": "Kubernetes",
+        "skill_id": 152
+    },
+    {
+        "skill_name": "Kubernetes Orchestration",
+        "skill_id": 153
+    },
+    {
+        "skill_name": "Kubernetes Deployment",
+        "skill_id": 154
+    },
+    {
+        "skill_name": "Kubernetes for DevOps",
+        "skill_id": 155
+    },
+    {
+        "skill_name": "Kubernetes Management",
+        "skill_id": 156
+    },
+    {
+        "skill_name": "Docker",
+        "skill_id": 157
+    },
+    {
+        "skill_name": "Docker Containers",
+        "skill_id": 158
+    },
+    {
+        "skill_name": "Docker Deployment",
         "skill_id": 159
+    },
+    {
+        "skill_name": "Docker Images",
+        "skill_id": 160
+    },
+    {
+        "skill_name": "Docker for DevOps",
+        "skill_id": 161
+    },
+    {
+        "skill_name": "Agile Methodology",
+        "skill_id": 162
+    },
+    {
+        "skill_name": "Agile Development",
+        "skill_id": 163
+    },
+    {
+        "skill_name": "Agile Project Management",
+        "skill_id": 164
+    },
+    {
+        "skill_name": "Agile Scrum",
+        "skill_id": 165
+    },
+    {
+        "skill_name": "Agile Frameworks",
+        "skill_id": 166
+    },
+    {
+        "skill_name": "Scrum",
+        "skill_id": 167
+    },
+    {
+        "skill_name": "Scrum Master",
+        "skill_id": 168
+    },
+    {
+        "skill_name": "Scrum Methodology",
+        "skill_id": 169
+    },
+    {
+        "skill_name": "Scrum Team Management",
+        "skill_id": 170
+    },
+    {
+        "skill_name": "Scrum Agile Development",
+        "skill_id": 171
+    },
+    {
+        "skill_name": "Data Science",
+        "skill_id": 172
+    },
+    {
+        "skill_name": "Data Science Analysis",
+        "skill_id": 173
+    },
+    {
+        "skill_name": "Data Science Programming",
+        "skill_id": 174
+    },
+    {
+        "skill_name": "Data Science Algorithms",
+        "skill_id": 175
+    },
+    {
+        "skill_name": "Data Science Tools",
+        "skill_id": 176
+    },
+    {
+        "skill_name": "Artificial Intelligence",
+        "skill_id": 177
+    },
+    {
+        "skill_name": "AI Development",
+        "skill_id": 178
+    },
+    {
+        "skill_name": "AI Algorithms",
+        "skill_id": 179
+    },
+    {
+        "skill_name": "AI Machine Learning",
+        "skill_id": 180
+    },
+    {
+        "skill_name": "AI Systems",
+        "skill_id": 181
+    },
+    {
+        "skill_name": "Cybersecurity",
+        "skill_id": 182
+    },
+    {
+        "skill_name": "Cybersecurity Threat Management",
+        "skill_id": 183
+    },
+    {
+        "skill_name": "Cybersecurity Risk Assessment",
+        "skill_id": 184
+    },
+    {
+        "skill_name": "Cybersecurity Tools",
+        "skill_id": 185
+    },
+    {
+        "skill_name": "Cybersecurity Engineering",
+        "skill_id": 186
+    },
+    {
+        "skill_name": "Penetration Testing",
+        "skill_id": 187
+    },
+    {
+        "skill_name": "Penetration Testing Tools",
+        "skill_id": 188
+    },
+    {
+        "skill_name": "Web Application Penetration Testing",
+        "skill_id": 189
+    },
+    {
+        "skill_name": "Network Penetration Testing",
+        "skill_id": 190
+    },
+    {
+        "skill_name": "Penetration Testing Automation",
+        "skill_id": 191
+    },
+    {
+        "skill_name": "Data Engineering",
+        "skill_id": 192
+    },
+    {
+        "skill_name": "Data Pipelines",
+        "skill_id": 193
+    },
+    {
+        "skill_name": "Big Data Engineering",
+        "skill_id": 194
+    },
+    {
+        "skill_name": "ETL (Extract, Transform, Load)",
+        "skill_id": 195
+    },
+    {
+        "skill_name": "Data Warehousing",
+        "skill_id": 196
+    },
+    {
+        "skill_name": "Blockchain",
+        "skill_id": 197
+    },
+    {
+        "skill_name": "Blockchain Development",
+        "skill_id": 198
+    },
+    {
+        "skill_name": "Blockchain Architecture",
+        "skill_id": 199
+    },
+    {
+        "skill_name": "Blockchain Security",
+        "skill_id": 200
+    },
+    {
+        "skill_name": "Smart Contracts",
+        "skill_id": 201
+    },
+    {
+        "skill_name": "Cryptography",
+        "skill_id": 202
+    },
+    {
+        "skill_name": "Encryption Algorithms",
+        "skill_id": 203
+    },
+    {
+        "skill_name": "Public Key Infrastructure (PKI)",
+        "skill_id": 204
+    },
+    {
+        "skill_name": "Symmetric Cryptography",
+        "skill_id": 205
+    },
+    {
+        "skill_name": "Asymmetric Cryptography",
+        "skill_id": 206
+    },
+    {
+        "skill_name": "Quantum Computing",
+        "skill_id": 207
+    },
+    {
+        "skill_name": "Quantum Algorithms",
+        "skill_id": 208
+    },
+    {
+        "skill_name": "Quantum Machine Learning",
+        "skill_id": 209
+    },
+    {
+        "skill_name": "Quantum Cryptography",
+        "skill_id": 210
+    },
+    {
+        "skill_name": "Quantum Programming",
+        "skill_id": 211
+    },
+    {
+        "skill_name": "Natural Language Processing (NLP)",
+        "skill_id": 212
+    },
+    {
+        "skill_name": "NLP Algorithms",
+        "skill_id": 213
+    },
+    {
+        "skill_name": "Text Mining",
+        "skill_id": 214
+    },
+    {
+        "skill_name": "Speech Recognition",
+        "skill_id": 215
+    },
+    {
+        "skill_name": "Sentiment Analysis",
+        "skill_id": 216
+    },
+    {
+        "skill_name": "Robotics",
+        "skill_id": 217
+    },
+    {
+        "skill_name": "Robotics Engineering",
+        "skill_id": 218
+    },
+    {
+        "skill_name": "Robotics Programming",
+        "skill_id": 219
+    },
+    {
+        "skill_name": "Robot Control Systems",
+        "skill_id": 220
+    },
+    {
+        "skill_name": "Autonomous Robotics",
+        "skill_id": 221
+    },
+    {
+        "skill_name": "Augmented Reality (AR)",
+        "skill_id": 222
+    },
+    {
+        "skill_name": "AR Development",
+        "skill_id": 223
+    },
+    {
+        "skill_name": "AR Applications",
+        "skill_id": 224
+    },
+    {
+        "skill_name": "AR Hardware Integration",
+        "skill_id": 225
+    },
+    {
+        "skill_name": "AR Experience Design",
+        "skill_id": 226
+    },
+    {
+        "skill_name": "Virtual Reality (VR)",
+        "skill_id": 227
+    },
+    {
+        "skill_name": "VR Development",
+        "skill_id": 228
+    },
+    {
+        "skill_name": "VR Applications",
+        "skill_id": 229
+    },
+    {
+        "skill_name": "VR Hardware Integration",
+        "skill_id": 230
+    },
+    {
+        "skill_name": "Immersive VR Experiences",
+        "skill_id": 231
+    },
+    {
+        "skill_name": "3D Modeling",
+        "skill_id": 232
+    },
+    {
+        "skill_name": "3D Rendering",
+        "skill_id": 233
+    },
+    {
+        "skill_name": "3D Animation",
+        "skill_id": 234
+    },
+    {
+        "skill_name": "3D Sculpting",
+        "skill_id": 235
+    },
+    {
+        "skill_name": "3D Printing",
+        "skill_id": 236
+    },
+    {
+        "skill_name": "Game Development",
+        "skill_id": 237
+    },
+    {
+        "skill_name": "Game Design",
+        "skill_id": 238
+    },
+    {
+        "skill_name": "Game Physics",
+        "skill_id": 239
+    },
+    {
+        "skill_name": "Game Engines",
+        "skill_id": 240
+    },
+    {
+        "skill_name": "Multiplayer Game Development",
+        "skill_id": 241
+    },
+    {
+        "skill_name": "UI/UX Design",
+        "skill_id": 242
+    },
+    {
+        "skill_name": "User Interface Design",
+        "skill_id": 243
+    },
+    {
+        "skill_name": "User Experience Design",
+        "skill_id": 244
+    },
+    {
+        "skill_name": "Wireframing",
+        "skill_id": 245
+    },
+    {
+        "skill_name": "Prototyping",
+        "skill_id": 246
+    },
+    {
+        "skill_name": "Data Visualization",
+        "skill_id": 247
+    },
+    {
+        "skill_name": "Data Dashboards",
+        "skill_id": 248
+    },
+    {
+        "skill_name": "Interactive Data Visualization",
+        "skill_id": 249
+    },
+    {
+        "skill_name": "Visualization Tools",
+        "skill_id": 250
+    },
+    {
+        "skill_name": "Storytelling with Data",
+        "skill_id": 251
+    },
+    {
+        "skill_name": "Internet of Things (IoT)",
+        "skill_id": 252
+    },
+    {
+        "skill_name": "IoT Development",
+        "skill_id": 253
+    },
+    {
+        "skill_name": "IoT Protocols",
+        "skill_id": 254
+    },
+    {
+        "skill_name": "Embedded Systems",
+        "skill_id": 255
+    },
+    {
+        "skill_name": "IoT Security",
+        "skill_id": 256
+    },
+    {
+        "skill_name": "Digital Marketing",
+        "skill_id": 257
+    },
+    {
+        "skill_name": "SEO (Search Engine Optimization)",
+        "skill_id": 258
+    },
+    {
+        "skill_name": "Content Marketing",
+        "skill_id": 259
+    },
+    {
+        "skill_name": "Social Media Marketing",
+        "skill_id": 260
+    },
+    {
+        "skill_name": "Email Marketing",
+        "skill_id": 261
+    },
+    {
+        "skill_name": "E-commerce",
+        "skill_id": 262
+    },
+    {
+        "skill_name": "E-commerce Development",
+        "skill_id": 263
+    },
+    {
+        "skill_name": "E-commerce Platforms",
+        "skill_id": 264
+    },
+    {
+        "skill_name": "E-commerce Marketing",
+        "skill_id": 265
+    },
+    {
+        "skill_name": "E-commerce Analytics",
+        "skill_id": 266
+    },
+    {
+        "skill_name": "Salesforce",
+        "skill_id": 267
+    },
+    {
+        "skill_name": "Salesforce Administration",
+        "skill_id": 268
+    },
+    {
+        "skill_name": "Salesforce Development",
+        "skill_id": 269
+    },
+    {
+        "skill_name": "Salesforce CRM",
+        "skill_id": 270
+    },
+    {
+        "skill_name": "Salesforce Integration",
+        "skill_id": 271
+    },
+    {
+        "skill_name": "IT Service Management",
+        "skill_id": 272
+    },
+    {
+        "skill_name": "ITIL (Information Technology Infrastructure Library)",
+        "skill_id": 273
+    },
+    {
+        "skill_name": "Incident Management",
+        "skill_id": 274
+    },
+    {
+        "skill_name": "Problem Management",
+        "skill_id": 275
+    },
+    {
+        "skill_name": "Change Management",
+        "skill_id": 276
+    },
+    {
+        "skill_name": "Digital Transformation",
+        "skill_id": 277
+    },
+    {
+        "skill_name": "Digital Strategy",
+        "skill_id": 278
+    },
+    {
+        "skill_name": "Digital Innovation",
+        "skill_id": 279
+    },
+    {
+        "skill_name": "Digital Product Management",
+        "skill_id": 280
+    },
+    {
+        "skill_name": "Digital Operations",
+        "skill_id": 281
     }
 ]
