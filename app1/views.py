@@ -65,3 +65,64 @@ class SkillSearchView(APIView):
         
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class AddSkillView(APIView):
+    """API to add a new skill to the FAISS index and JSON file."""
+    
+    def post(self, request):
+        skill_name = request.data.get('skill_name')
+     
+        skill_id = request.data.get('skill_id')
+
+
+        if not skill_name or not skill_id:
+            return Response({"error": "Both skill_name and skill_id are required."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+
+            INDEX_FILE = os.path.join(os.path.dirname(__file__), "faiss_skills_index")
+                # Load data from JSON file located in the same directory as this script
+            skills_file_path = os.path.join(os.path.dirname(__file__), 'skills.json')
+            with open(skills_file_path, 'r') as file:
+                data = json.load(file)
+        
+                
+            skill_ids = [skill['skill_id'] for skill in data]
+
+            if os.path.exists(INDEX_FILE):
+                index = faiss.read_index(INDEX_FILE)
+            else:
+                return Response({"error": f"No FAISS index found at {INDEX_FILE}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+            
+
+            # Load existing skills from JSON
+       
+        
+            # Generate embedding for the new skill
+            embedding_vector = embeddings.embed_query(skill_name)
+            embedding_vector = np.array(embedding_vector).astype('float32')
+
+            # Add new skill to index
+            index.add(np.expand_dims(embedding_vector, axis=0))
+
+            # Create a new skill entry
+            new_skill = {"skill_name": skill_name, "skill_id": skill_id}
+
+            # Append the new skill to the existing skills data
+            data.append(new_skill)
+
+            # Save updated skills data back to the JSON file
+            with open(skills_file_path, 'w') as file:
+                json.dump(data, file, indent=4)  # Save with indentation for readability
+
+            # Save the updated FAISS index back to the file
+            faiss.write_index(index, INDEX_FILE)
+
+            return Response({"message": f"Skill '{skill_name}' added with skill_id {skill_id}."}, status=status.HTTP_201_CREATED)
+        
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
