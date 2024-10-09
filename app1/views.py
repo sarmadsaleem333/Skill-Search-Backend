@@ -52,15 +52,22 @@ class SkillSearchView(APIView):
                 skill_id = skill_ids[i]
                 matched_skill_name = next(skill['skill_name'] for skill in applied_skills if skill['skill_id'] == skill_id)
 
+
                 results.append({
                     "skill_id": skill_id,
                     "skill_name": matched_skill_name,
                     "distance": distances[0][j]
                 })
+                # if distances[0][j] > 1.0:
+                #       results.append({
+                #     "skill_id": skill_id,
+                #     "skill_name": matched_skill_name,
+                #     "distance": distances[0][j]
+                #         })
 
             end_time = time.time()
             print("Time taken for search:", end_time - start_time)
-
+            
             return Response(results, status=status.HTTP_200_OK)
         
         except Exception as e:
@@ -138,16 +145,10 @@ class DeleteSkillView(APIView):
             # Find the skill in the JSON file
             skill_to_delete = None
             for skill in data:
-                # if skill['skill_id'] == skill_id:
-                #     print("Skill found")
-                #     skill_to_delete = skill_id
-                #     break
                 print(skill['skill_id'],skill_id)
                 if str(skill['skill_id']) == skill_id:
-                    print("Skill found")
                     skill_to_delete = skill
-             
-            print(skill_to_delete,"skill to delete")
+                    break
             if skill_to_delete is None:
                 return Response({"message": f"Skill does not exist."}, status=status.HTTP_404_NOT_FOUND)
 
