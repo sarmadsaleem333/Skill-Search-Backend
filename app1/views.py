@@ -44,7 +44,7 @@ class SkillSearchView(APIView):
             query_embedding_np = np.array(query_embedding).astype('float32')
 
             # Search the FAISS index for the closest matches
-            distances, indices = index.search(np.expand_dims(query_embedding_np, axis=0), 4)
+            distances, indices = index.search(np.expand_dims(query_embedding_np, axis=0), 10)
 
             # Fetch the results, mapping indices to skill names and IDs
             results = []
@@ -52,18 +52,16 @@ class SkillSearchView(APIView):
                 skill_id = skill_ids[i]
                 matched_skill_name = next(skill['skill_name'] for skill in applied_skills if skill['skill_id'] == skill_id)
 
-
-                results.append({
+                if distances[0][j] < 0.5:
+                     results.append({
                     "skill_id": skill_id,
                     "skill_name": matched_skill_name,
                     "distance": distances[0][j]
-                })
-                # if distances[0][j] > 1.0:
-                #       results.append({
-                #     "skill_id": skill_id,
-                #     "skill_name": matched_skill_name,
-                #     "distance": distances[0][j]
-                #         })
+                      })
+               
+
+
+              
 
             end_time = time.time()
             print("Time taken for search:", end_time - start_time)

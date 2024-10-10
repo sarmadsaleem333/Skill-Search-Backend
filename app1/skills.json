@@ -1,19 +1,11 @@
 [
     {
-        "skill_name": "React",
-        "skill_id": 1
-    },
-    {
         "skill_name": "Product Marketing",
         "skill_id": 99
     },
     {
         "skill_name": "React JavaScript",
         "skill_id": 2
-    },
-    {
-        "skill_name": "React JS",
-        "skill_id": 3
     },
     {
         "skill_name": "JavaScript",
@@ -70,10 +62,6 @@
     {
         "skill_name": "Python",
         "skill_id": 102
-    },
-    {
-        "skill_name": "Python Programming",
-        "skill_id": 103
     },
     {
         "skill_name": "Python Scripting",
@@ -786,5 +774,17 @@
     {
         "skill_name": "Digital Operations",
         "skill_id": 281
+    },
+    {
+        "skill_name": "Geme Development",
+        "skill_id": 301
+    },
+    {
+        "skill_name": "Pythin",
+        "skill_id": "3"
+    },
+    {
+        "skill_name": "react js",
+        "skill_id": "1002"
     }
 ]
