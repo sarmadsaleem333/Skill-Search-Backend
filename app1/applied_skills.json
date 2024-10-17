@@ -786,5 +786,13 @@
     {
         "skill_name": "react js",
         "skill_id": "1002"
+    },
+    {
+        "skill_name": "react js",
+        "skill_id": "10001"
+    },
+    {
+        "skill_name": "Maachine Leerning",
+        "skill_id": 309
     }
 ]

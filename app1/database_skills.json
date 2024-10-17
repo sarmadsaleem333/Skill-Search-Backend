@@ -1,0 +1,406 @@
+[
+    {
+        "skill_name": "React",
+        "skill_id": 1
+    },
+    {
+        "skill_name": "Angular",
+        "skill_id": 2
+    },
+    {
+        "skill_name": "Vue.js",
+        "skill_id": 3
+    },
+    {
+        "skill_name": "HTML5",
+        "skill_id": 4
+    },
+    {
+        "skill_name": "CSS3",
+        "skill_id": 5
+    },
+    {
+        "skill_name": "JavaScript",
+        "skill_id": 6
+    },
+    {
+        "skill_name": "TypeScript",
+        "skill_id": 7
+    },
+    {
+        "skill_name": "Bootstrap",
+        "skill_id": 8
+    },
+    {
+        "skill_name": "Sass",
+        "skill_id": 9
+    },
+    {
+        "skill_name": "Webpack",
+        "skill_id": 10
+    },
+    {
+        "skill_name": "Node.js",
+        "skill_id": 11
+    },
+    {
+        "skill_name": "Express.js",
+        "skill_id": 12
+    },
+    {
+        "skill_name": "RESTful APIs",
+        "skill_id": 13
+    },
+    {
+        "skill_name": "GraphQL",
+        "skill_id": 14
+    },
+    {
+        "skill_name": "MongoDB",
+        "skill_id": 15
+    },
+    {
+        "skill_name": "PostgreSQL",
+        "skill_id": 16
+    },
+    {
+        "skill_name": "MySQL",
+        "skill_id": 17
+    },
+    {
+        "skill_name": "Python",
+        "skill_id": 18
+    },
+    {
+        "skill_name": "Flask",
+        "skill_id": 19
+    },
+    {
+        "skill_name": "Django",
+        "skill_id": 20
+    },
+    {
+        "skill_name": "Machine Learning",
+        "skill_id": 21
+    },
+    {
+        "skill_name": "Deep Learning",
+        "skill_id": 22
+    },
+    {
+        "skill_name": "TensorFlow",
+        "skill_id": 23
+    },
+    {
+        "skill_name": "Keras",
+        "skill_id": 24
+    },
+    {
+        "skill_name": "PyTorch",
+        "skill_id": 25
+    },
+    {
+        "skill_name": "Scikit-learn",
+        "skill_id": 26
+    },
+    {
+        "skill_name": "Data Analysis",
+        "skill_id": 27
+    },
+    {
+        "skill_name": "Data Science",
+        "skill_id": 28
+    },
+    {
+        "skill_name": "Pandas",
+        "skill_id": 29
+    },
+    {
+        "skill_name": "NumPy",
+        "skill_id": 30
+    },
+    {
+        "skill_name": "Natural Language Processing",
+        "skill_id": 31
+    },
+    {
+        "skill_name": "Computer Vision",
+        "skill_id": 32
+    },
+    {
+        "skill_name": "Docker",
+        "skill_id": 33
+    },
+    {
+        "skill_name": "Kubernetes",
+        "skill_id": 34
+    },
+    {
+        "skill_name": "AWS",
+        "skill_id": 35
+    },
+    {
+        "skill_name": "Azure",
+        "skill_id": 36
+    },
+    {
+        "skill_name": "Google Cloud Platform",
+        "skill_id": 37
+    },
+    {
+        "skill_name": "CI/CD",
+        "skill_id": 38
+    },
+    {
+        "skill_name": "Git",
+        "skill_id": 39
+    },
+    {
+        "skill_name": "GitHub",
+        "skill_id": 40
+    },
+    {
+        "skill_name": "GitLab",
+        "skill_id": 41
+    },
+    {
+        "skill_name": "Jenkins",
+        "skill_id": 42
+    },
+    {
+        "skill_name": "Salesforce",
+        "skill_id": 43
+    },
+    {
+        "skill_name": "CRM Management",
+        "skill_id": 44
+    },
+    {
+        "skill_name": "Lead Generation",
+        "skill_id": 45
+    },
+    {
+        "skill_name": "B2B Sales",
+        "skill_id": 46
+    },
+    {
+        "skill_name": "B2C Sales",
+        "skill_id": 47
+    },
+    {
+        "skill_name": "Cold Calling",
+        "skill_id": 48
+    },
+    {
+        "skill_name": "Sales Negotiation",
+        "skill_id": 49
+    },
+    {
+        "skill_name": "Sales Strategy",
+        "skill_id": 50
+    },
+    {
+        "skill_name": "Market Research",
+        "skill_id": 51
+    },
+    {
+        "skill_name": "Digital Marketing",
+        "skill_id": 52
+    },
+    {
+        "skill_name": "SEO",
+        "skill_id": 53
+    },
+    {
+        "skill_name": "Google Analytics",
+        "skill_id": 54
+    },
+    {
+        "skill_name": "Content Marketing",
+        "skill_id": 55
+    },
+    {
+        "skill_name": "Email Marketing",
+        "skill_id": 56
+    },
+    {
+        "skill_name": "Social Media Marketing",
+        "skill_id": 57
+    },
+    {
+        "skill_name": "Ad Campaigns",
+        "skill_id": 58
+    },
+    {
+        "skill_name": "PPC Advertising",
+        "skill_id": 59
+    },
+    {
+        "skill_name": "Facebook Ads",
+        "skill_id": 60
+    },
+    {
+        "skill_name": "Google Ads",
+        "skill_id": 61
+    },
+    {
+        "skill_name": "Copywriting",
+        "skill_id": 62
+    },
+    {
+        "skill_name": "Brand Management",
+        "skill_id": 63
+    },
+    {
+        "skill_name": "Product Marketing",
+        "skill_id": 64
+    },
+    {
+        "skill_name": "Business Development",
+        "skill_id": 65
+    },
+    {
+        "skill_name": "Partnership Development",
+        "skill_id": 66
+    },
+    {
+        "skill_name": "Strategic Planning",
+        "skill_id": 67
+    },
+    {
+        "skill_name": "Project Management",
+        "skill_id": 68
+    },
+    {
+        "skill_name": "Agile Methodologies",
+        "skill_id": 69
+    },
+    {
+        "skill_name": "Scrum",
+        "skill_id": 70
+    },
+    {
+        "skill_name": "Kanban",
+        "skill_id": 71
+    },
+    {
+        "skill_name": "Leadership",
+        "skill_id": 72
+    },
+    {
+        "skill_name": "Team Management",
+        "skill_id": 73
+    },
+    {
+        "skill_name": "Business Analysis",
+        "skill_id": 74
+    },
+    {
+        "skill_name": "Financial Modeling",
+        "skill_id": 75
+    },
+    {
+        "skill_name": "Business Strategy",
+        "skill_id": 76
+    },
+    {
+        "skill_name": "Market Analysis",
+        "skill_id": 77
+    },
+    {
+        "skill_name": "Product Management",
+        "skill_id": 78
+    },
+    {
+        "skill_name": "User Experience (UX)",
+        "skill_id": 79
+    },
+    {
+        "skill_name": "User Interface (UI)",
+        "skill_id": 80
+    },
+    {
+        "skill_name": "Wireframing",
+        "skill_id": 81
+    },
+    {
+        "skill_name": "Prototyping",
+        "skill_id": 82
+    },
+    {
+        "skill_name": "Figma",
+        "skill_id": 83
+    },
+    {
+        "skill_name": "Sketch",
+        "skill_id": 84
+    },
+    {
+        "skill_name": "Adobe XD",
+        "skill_id": 85
+    },
+    {
+        "skill_name": "Customer Success",
+        "skill_id": 86
+    },
+    {
+        "skill_name": "Customer Relationship Management",
+        "skill_id": 87
+    },
+    {
+        "skill_name": "Public Speaking",
+        "skill_id": 88
+    },
+    {
+        "skill_name": "Presentation Skills",
+        "skill_id": 89
+    },
+    {
+        "skill_name": "Negotiation",
+        "skill_id": 90
+    },
+    {
+        "skill_name": "Stakeholder Management",
+        "skill_id": 91
+    },
+    {
+        "skill_name": "Risk Management",
+        "skill_id": 92
+    },
+    {
+        "skill_name": "Cloud Computing",
+        "skill_id": 93
+    },
+    {
+        "skill_name": "Serverless Architecture",
+        "skill_id": 94
+    },
+    {
+        "skill_name": "Microservices",
+        "skill_id": 95
+    },
+    {
+        "skill_name": "Event-Driven Architecture",
+        "skill_id": 96
+    },
+    {
+        "skill_name": "Data Engineering",
+        "skill_id": 97
+    },
+    {
+        "skill_name": "Big Data",
+        "skill_id": 98
+    },
+    {
+        "skill_name": "Artificial Intelligence",
+        "skill_id": 99
+    },
+    {
+        "skill_name": "DevOps",
+        "skill_id": 100
+    },
+    {
+        "skill_name": "RAG",
+        "skill_id": 3000
+    }
+]
