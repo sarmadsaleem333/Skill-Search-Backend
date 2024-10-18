@@ -12,7 +12,7 @@ import google.generativeai as genai
 # Initialize HuggingFaceEmbeddings
 # importing the model from langchain_huggingface which will generate embedding for us
 embeddings = HuggingFaceEmbeddings()
-genai.configure(api_key="AIzaSyAvNVzRtjCnW7tWeIa0sS4pYIDGHz_TLZY")
+genai.configure(api_key="")
 
             # Define the model
 model = genai.GenerativeModel("gemini-1.5-flash")
