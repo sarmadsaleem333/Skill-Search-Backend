@@ -12,7 +12,7 @@ import google.generativeai as genai
 # Initialize HuggingFaceEmbeddings
 # importing the model from langchain_huggingface which will generate embedding for us
 embeddings = HuggingFaceEmbeddings()
-genai.configure(api_key="")
+genai.configure(api_key="AIzaSyAvNVzRtjCnW7tWeIa0sS4pYIDGHz_TLZY")
 
             # Define the model
 model = genai.GenerativeModel("gemini-1.5-flash")
@@ -189,70 +189,71 @@ class AppliedSkillSearchView(APIView):
 
 
 
-
-
 # class for handling database approved skills that recommend user for the skills on job title
 # for database skills using database_faiss_index and database_skills.json
 class ApprovedSkillSearchView(APIView):
 
     # for user
     # api for user when user enter job title and it will return the skills related to that job title which is in database
+
+
     def get(self, request):
         try:
-
             job_title = request.query_params.get('job_title', None)
-            print("mss",job_title)
             if not job_title:
                 return Response({"error": "job_title parameter is required"}, status=status.HTTP_400_BAD_REQUEST)
-            
+
             # Generate content with a specific request for an array of skills
-            prompt = f"""
-                You are a helpful assistant that generates a comprehensive job description based on a job title provided by the user.
-                Your response should include the following sections:
-                Your response **must** strictly follow this format to be valid JSON with no additional newlines or special characters:
-                1. "We are" statement introducing the job description not specifying our company, only providing a job description summary for the given title for 3-4 lines.
-                2. Key responsibilities (5-6 bullet points).
-                3. Requirements (5-6 bullet points).
-                4. Random 6-7 benefits related to the job like monthly team dinners, outings, etc.
-                5. Provide a list of 5 important skills  for this job title in a JSON array format (not in HTML).
-
-                The job title is: {job_title}.
-                
-                Provide the result in Html Rich Text format with the following fields:
-                - Description
-                - Responsibilities
-                - Requirements
-                - Benefits
-
-                Additionally, provide a list of skills in a JSON array format:
-                - Skills
-
-                Do not add /n in the response.
-
-                Response should be in the following style:
-                "description": "p tag description here"
-                "responsibilities": "list tag responsibilities here"
-                "requirements": "list tag requirements here"
-                "benefits": "list tag benefits here"
-                "skills": ["skill1", "skill2", "skill3", ...]
-                
-            """
-
-            
-            # Make the request to the model
-            response = model.generate_content(prompt)
-            print(response.text,"ok")
-            # Convert the JSON string into a Python dictionary (JSON object)
-            json_object = json.loads(response.text)
-            print(json_object["skills"])
-
         
 
-            
-            
-            skill_names=json_object["skills"]
+            prompt = f"""
+            You are a helpful assistant that generates a comprehensive job description based on a job title provided by the user.
+            Your response should include the following sections:
+            Your response **must** strictly follow this format to be valid JSON with no additional newlines or special characters:
+            1. "We are" statement introducing the job description not specifying our company, only providing a job description summary for the given title for 3-4 lines.
+            2. Key responsibilities (5-6 bullet points).
+            3. Requirements (5-6 bullet points).
+            4. Random 6-7 benefits related to the job like monthly team dinners, outings, etc.
+            5. Provide a list of 5 important skills for this job title in a JSON array format (not in HTML).
 
-            start_time = time.time()
+            The job title is: {job_title}.
+
+            Provide the result in Html Rich Text format with the following fields:
+            - Description
+            - Responsibilities
+            - Requirements
+            - Benefits
+
+            Additionally, provide a list of skills in a JSON array format:
+            - Skills
+
+            Do not add /n in the response.
+
+            Response should be in the following style:
+            "description": "p tag description here"
+            "responsibilities": "list tag responsibilities here"
+            "requirements": "list tag requirements here"
+            "benefits": "list tag benefits here"
+            "skills": ["skill1", "skill2", "skill3", ...]
+
+            I want the response in proper JSON format like with with brackets  not with json and ''' literal etc.
+            """
+
+
+            # Make the request to the model
+            response = model.generate_content(prompt)
+            print(response.text, "ok")
+
+            # Convert the JSON string into a Python dictionary (JSON object)
+            json_object = json.loads(response.text)
+            
+            # Extract sections from the response
+            description = json_object.get("description", "")
+            responsibilities = json_object.get("responsibilities", "")
+            requirements = json_object.get("requirements", "")
+            benefits = json_object.get("benefits", "")
+            skills = json_object.get("skills", [])
+
 
             # Load data from JSON file located in the same directory as this script
             skills_file_path = os.path.join(os.path.dirname(__file__), 'database_skills.json')
@@ -268,24 +269,19 @@ class ApprovedSkillSearchView(APIView):
             else:
                 return Response({"error": f"No FAISS index found at {INDEX_FILE}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
-            # Get the query embedding
-
+            # Search the FAISS index and find the closest matching skills
             results = []
             seen_skills = set()  
 
-
-             # Iterate through each skill in the skill_names array
-            for skill_name in skill_names:
+            # Iterate through each skill in the skill_names array
+            for skill_name in skills:
                 print(skill_name)
 
                 # Get the query embedding
                 query_embedding = embeddings.embed_query(skill_name)
                 query_embedding_np = np.array(query_embedding).astype('float32')
-            
+
                 # Search the FAISS index
- 
-            
                 distances, indices = index.search(np.expand_dims(query_embedding_np, axis=0), 10)
 
                 for j, i in enumerate(indices[0]):
@@ -299,24 +295,27 @@ class ApprovedSkillSearchView(APIView):
                             "distance": distances[0][j]
                         })
                         seen_skills.add(skill_name_result)
-            end_time = time.time()
-            print("Time taken for search:", end_time - start_time)
+
+            # Sort results by distance
             results = sorted(results, key=lambda x: x['distance'])
+            top_k=10
+            if len(results) > top_k:
+                results = results[:top_k]
 
 
+            # Build the final response with all sections from Gemini
+            response_data = {
+                "description": description,
+                "responsibilities": responsibilities,
+                "requirements": requirements,
+                "benefits": benefits,
+                "skills": results  # Use the results from FAISS index search instead of the original skill list
+            }
 
+            return Response(response_data, status=status.HTTP_200_OK)
 
-            # if we wanna get top k skills
-            # topk=20
-
-            # if len(results) > 20:
-            #     results = results[:topk]
-
-            return Response(results, status=status.HTTP_200_OK)
-        
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
-
 
 
 
