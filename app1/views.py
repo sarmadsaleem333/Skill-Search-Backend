@@ -12,13 +12,16 @@ import google.generativeai as genai
 # Initialize HuggingFaceEmbeddings
 # importing the model from langchain_huggingface which will generate embedding for us
 embeddings = HuggingFaceEmbeddings()
+genai.configure(api_key="")
+
+            # Define the model
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 
 # for applied skills that user have entered and now admin has to do operations on it
 # for applied skills using applied_skills_faiss_index and applied_skills.json
 class AppliedSkillSearchView(APIView):
-
 
     # for admin
     # getting all skills in applied database related to searched skill like for reactjs it comes react javascript etc
@@ -196,17 +199,58 @@ class ApprovedSkillSearchView(APIView):
     # api for user when user enter job title and it will return the skills related to that job title which is in database
     def get(self, request):
         try:
+
+            job_title = request.query_params.get('job_title', None)
+            print("mss",job_title)
+            if not job_title:
+                return Response({"error": "job_title parameter is required"}, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Generate content with a specific request for an array of skills
+            prompt = f"""
+                You are a helpful assistant that generates a comprehensive job description based on a job title provided by the user.
+                Your response should include the following sections:
+                Your response **must** strictly follow this format to be valid JSON with no additional newlines or special characters:
+                1. "We are" statement introducing the job description not specifying our company, only providing a job description summary for the given title for 3-4 lines.
+                2. Key responsibilities (5-6 bullet points).
+                3. Requirements (5-6 bullet points).
+                4. Random 6-7 benefits related to the job like monthly team dinners, outings, etc.
+                5. Provide a list of 5 important skills  for this job title in a JSON array format (not in HTML).
+
+                The job title is: {job_title}.
+                
+                Provide the result in Html Rich Text format with the following fields:
+                - Description
+                - Responsibilities
+                - Requirements
+                - Benefits
+
+                Additionally, provide a list of skills in a JSON array format:
+                - Skills
+
+                Do not add /n in the response.
+
+                Response should be in the following style:
+                "description": "p tag description here"
+                "responsibilities": "list tag responsibilities here"
+                "requirements": "list tag requirements here"
+                "benefits": "list tag benefits here"
+                "skills": ["skill1", "skill2", "skill3", ...]
+                
+            """
+
+            
+            # Make the request to the model
+            response = model.generate_content(prompt)
+            print(response.text,"ok")
+            # Convert the JSON string into a Python dictionary (JSON object)
+            json_object = json.loads(response.text)
+            print(json_object["skills"])
+
         
 
-            # Extract the 'skills' array
-            # job_title = request.query_params.get('job_title', None)
-            # print("mss",job_title)
-
-            # # here user will take input from user the job title then it will make api call to gemini 
-            # # and gemini will return 4-5 skills for that job title
-            # # for this time hardcoded here 
             
-            skill_names=["RAG","NLP","Machine Learning"]
+            
+            skill_names=json_object["skills"]
 
             start_time = time.time()
 
