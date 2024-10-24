@@ -7,14 +7,17 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import numpy as np
 import os
 import time
+from django.core.files.storage import default_storage
 import google.generativeai as genai
+from pydparser import ResumeParser
+import re
 
 # Initialize HuggingFaceEmbeddings
 # importing the model from langchain_huggingface which will generate embedding for us
 embeddings = HuggingFaceEmbeddings()
 genai.configure(api_key="")
 
-            # Define the model
+# Define the model
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
@@ -430,4 +433,29 @@ class ApprovedSkillSearchView(APIView):
         except Exception as e:
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
-    
+
+
+# for user
+class ResumeParserView(APIView):
+    def post(self, request):
+        try:
+            # Get the PDF file from the request
+            resume_file = request.FILES.get('resume', None)
+            if not resume_file:
+                return Response({"error": "resume parameter is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Save the uploaded file to a temporary location
+            temp_file_path = default_storage.save('temp_resume.pdf', resume_file)
+
+            # Parse the resume using the PyDParser library
+            parser = ResumeParser(temp_file_path)  # Pass the path of the temporary file
+            parsed_resume = parser.get_extracted_data()  # Extract data
+
+            # Clean up the temporary file
+            if os.path.exists(temp_file_path):
+                os.remove(temp_file_path)
+
+            return Response(parsed_resume, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)

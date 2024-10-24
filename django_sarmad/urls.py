@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from app1.views import AppliedSkillSearchView,ApprovedSkillSearchView # Import both views
+from app1.views import AppliedSkillSearchView,ApprovedSkillSearchView,ResumeParserView # Import both views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -11,5 +11,7 @@ urlpatterns = [
 
     path("recommend_skills/", ApprovedSkillSearchView.as_view(), name="recommend_skills"),
     path('recommend_skills/<int:skill_id>/', ApprovedSkillSearchView.as_view(), name='delete_rec_skill'),
+    path('resume_parser/', ResumeParserView.as_view(), name='resume_parser'), 
+
 
 ]
